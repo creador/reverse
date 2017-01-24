@@ -1,0 +1,16 @@
+{
+  "name": "reverse",
+  "version": "1.0.0",
+  "description": "A generic APK decompiler with meta information",
+  "main": "reverse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "decompiler",
+    "reverse",
+    "creador"
+  ],
+  "author": "Pablo Schaffner",
+  "license": "MIT"
+}
