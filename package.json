@@ -12,5 +12,13 @@
     "creador"
   ],
   "author": "Pablo Schaffner",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creador/reverse.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "leven": "^2.0.0",
+    "viz.js": "^1.5.1"
+  }
 }
