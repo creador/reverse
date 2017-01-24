@@ -18,6 +18,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "doppio": "^0.3.3",
     "leven": "^2.0.0",
     "viz.js": "^1.5.1"
   }

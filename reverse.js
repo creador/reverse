@@ -25,5 +25,24 @@ Get the source code for the APK:
 		2.1.1) this is an Appcelerator Titanium App compiled using Development Testing.
 	2.2) if file 'package'.replace('.','/')/AssetCryptImpl.smali file exist
 		2.2.2) this is a Production Appcelerator Titanium App.
+		2.2.3) extracts code from class AssetCryptImpl, reading it as samli.
+			2.2.3.1) search pattern 'hashmap.put("{file}, new Range({offset},{length})',
+			2.2.3.2) decode integers offset and length (bytes)
+			2.2.3.3) extract and decrypt dataInRange using 'bytes' length as secret key and AES for decipher
+			2.2.3.4) put the result into a struct with the 'filenames' as struct keys.
 
+3) each 'plugin' must have the methods:
+	- init(config): testing if it is valid for the given apk/src/etc.
+	- getMetrics()
+		ret: {
+			code 			: 	getCodeMetrics(),
+			info 			: 	getInfo(), 
+			design 			: 	getDesignMetrics(), 
+			strings 		: 	getStringsMetrics(),
+			code_costs 		: 	getCodeCost(),
+			design_costs 	: 	getDesignCost(),
+			code_flow 		: 	getFlowChart()
+		}
+	- getFlowChart() 
+		- returns a 'dot' (viz.js) flow chart for source code.
 */
